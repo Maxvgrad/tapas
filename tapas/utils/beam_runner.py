@@ -67,6 +67,8 @@ def run_type(pipeline, runner_type):
     setup = options.view_as(pipeline_options.SetupOptions)
     setup.extra_packages = FLAGS.extra_packages
     setup.save_main_session = FLAGS.save_main_session
+    w_options = options.view_as(pipeline_options.WorkerOptions)
+    w_options.machine_type = 'n1-highmem-2'
     return runners.DataflowRunner().run(pipeline, options=options)
   raise ValueError(f"Unsupported runner type: {runner_type}")
 

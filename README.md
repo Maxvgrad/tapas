@@ -1,3 +1,19 @@
+# NLP course project: TableFormer: Enhancing Robustness in Table-Text Encoding with Transformer Models
+
+Project members: Maksim Ploter, Kaspar Metsa
+
+## Abstract 
+
+Understanding and reasoning over tabular data is important in many domains. Traditional transformer-based models like TAPAS (Table Parser) linearise tables into sequences, introducing row and column position biases. 
+These models exhibit inconsistent performance when the table data order changes (perturbations). 
+TableFormer, proposed by (Yang et al., 2022), addresses this by using learnable attention biases, making the model ignore row and column order. 
+In this work, we assessed the importance of the pre-training step for the TableFormer model by omitting it entirely from the training procedure. 
+Our evaluations showed that TableFormer can achieve the same accuracy as pre-trained TAPAS.
+
+[paper.pdf](paper.pdf)
+
+This repository is https://github.com/google-research/tapas fork, with additional changes to achieve project goal.
+
 # TAble PArSing (TAPAS)
 
 Code and checkpoints for training the transformer-based Table QA models introduced
